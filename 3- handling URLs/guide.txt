@@ -1,0 +1,8 @@
+
+
+query parameters ===>> extra info that we can send/pass along with URL
+
+e.g .... https://ramnito.agency/services?service_type=web+development
+
+        path = services
+        query parameter = web+development
