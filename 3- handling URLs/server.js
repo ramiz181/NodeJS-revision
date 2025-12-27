@@ -10,7 +10,15 @@ const app = http.createServer((req, res) => {
     }
     const logs = `${Date.now()} localhost:${PORT}${req.url} \n`
 
-    const parseURL = url.parse(req.url, true);
+    // url.parse  ==> URL ko parse krta h
+    // or jub last mn true kr den to query parameter bhe parse ho jta h 
+
+    // on true ==> query: [Object: null prototype] { id: '12' },
+    // on false ==> query: 'id=12',
+
+    const parseURL = url.parse(req.url, false);
+    console.log(parseURL);
+    
     console.log(parseURL);
 
     fs.appendFile('logs.txt', logs, (err) => {
@@ -39,4 +47,4 @@ const app = http.createServer((req, res) => {
     })
 })
 
-app.listen(3000, console.log("server started successfully..."));
+app.listen(3000, console.log("server started on PORT: 3000"));
