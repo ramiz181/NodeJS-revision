@@ -8,7 +8,7 @@ const app = http.createServer((req, res) => {
     if (req.url === '/favicon.ico') {
         return res.end("favicon...")
     }
-    const logs = `${Date.now()} localhost:${PORT}${req.url} \n`
+    const logs = `${Date.now()} localhost:${PORT}${req.url}\n`
 
     // url.parse  ==> URL ko parse krta h
     // or jub last mn true kr den to query parameter bhe parse ho jta h 
@@ -16,9 +16,7 @@ const app = http.createServer((req, res) => {
     // on true ==> query: [Object: null prototype] { id: '12' },
     // on false ==> query: 'id=12',
 
-    const parseURL = url.parse(req.url, false);
-    console.log(parseURL);
-    
+    const parseURL = url.parse(req.url, true);
     console.log(parseURL);
 
     fs.appendFile('logs.txt', logs, (err) => {
@@ -35,7 +33,7 @@ const app = http.createServer((req, res) => {
                 break;
             case '/services':
                 const services = parseURL.query.service
-                res.end(`I am ${services}...`)
+                res.end(`I am ${services} expert...`)
                 break;
             case '/contact':
                 res.end("contact me...")
