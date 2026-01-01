@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "first_name": "Renelle",
+        "last_name": "Butteris",
+        "email": "rbutteris0@foxnews.com",
+        "gender": "Female",
+        "job_title": "Programmer Analyst II"
+    },
+    {
+        "id": 2,
+        "first_name": "Hortensia",
+        "last_name": "Kinvan",
+        "email": "hkinvan1@telegraph.co.uk",
+        "gender": "Non-binary",
+        "job_title": "Desktop Support Technician"
+    },
+    {
+        "id": 3,
+        "first_name": "Artie",
+        "last_name": "O'Geneay",
+        "email": "aogeneay2@wufoo.com",
+        "gender": "Male",
+        "job_title": "Senior Sales Associate"
+    },
+    {
+        "id": 4,
+        "first_name": "Johnathon",
+        "last_name": "Rubbens",
+        "email": "jrubbens3@state.tx.us",
+        "gender": "Male",
+        "job_title": "Sales Associate"
+    },
+    {
+        "id": 5,
+        "first_name": "Rowen",
+        "last_name": "Suarez",
+        "email": "rsuarez4@opera.com",
+        "gender": "Male",
+        "job_title": "Actuary"
+    },
+    {
+        "id": 6,
+        "first_name": "Richardo",
+        "last_name": "Huffer",
+        "email": "rhuffer5@smugmug.com",
+        "gender": "Genderqueer",
+        "job_title": "Programmer Analyst III"
+    },
+    {
+        "id": 7,
+        "first_name": "Karissa",
+        "last_name": "Gorstidge",
+        "email": "kgorstidge6@dailymail.co.uk",
+        "gender": "Female",
+        "job_title": "Assistant Manager"
+    },
+    {
+        "id": 8,
+        "first_name": "Emlen",
+        "last_name": "Condy",
+        "email": "econdy7@samsung.com",
+        "gender": "Male",
+        "job_title": "Environmental Tech"
+    },
+    {
+        "id": 9,
+        "first_name": "Luelle",
+        "last_name": "Persey",
+        "email": "lpersey8@marketwatch.com",
+        "gender": "Female",
+        "job_title": "Civil Engineer"
+    },
+    {
+        "id": 10,
+        "first_name": "Marina",
+        "last_name": "Crebo",
+        "email": "mcrebo9@multiply.com",
+        "gender": "Female",
+        "job_title": "Director of Sales"
+    }
+]
