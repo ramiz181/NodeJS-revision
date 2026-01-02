@@ -1,0 +1,12 @@
+
+
+app.use(express.urlencoded({ extended: false }));
+
+    extended: false ==> supports normal objects
+    extended: true ==> supports nested objects
+    
+
+express.urlencoded is an express middleware.....it tells express k:
+    ==> read the URL encoded form data
+    ==> parse it
+    ==> attach it to req.body
