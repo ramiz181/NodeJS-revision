@@ -28,25 +28,25 @@ app.post('/api/users', (req, res) => {
 
 // edit krna h data ksi bhe ID ka 
 
-app.put('/api/users/:id', (req, res) => {
+app.patch('/api/users/:id', (req, res) => {
 
     const body = req.body
     const id = Number(req.params.id)
     let updatedUser
 
     // PATCH HTTP method styled API
-    // updatedUser = users.map(user => {
-    //     return user.id === id
-    //         ? { ...user, ...body }
-    //         : user
-    // })
-
-    // PUT HTTP method styled API
     updatedUser = users.map(user => {
         return user.id === id
-            ? { id, ...body }
+            ? { ...user, ...body }
             : user
     })
+
+    // PUT HTTP method styled API
+    // updatedUser = users.map(user => {
+    //     return user.id === id
+    //         ? { id, ...body }
+    //         : user
+    // })
 
     fs.writeFile("USERS.json", JSON.stringify(updatedUser), (err) => {
         if (err) throw err

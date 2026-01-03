@@ -1,7 +1,11 @@
 [
     {
         "id": 1,
-        "gender": "female"
+        "first_name": "Davie",
+        "last_name": "Fortgry",
+        "email": "davi@gmail.com",
+        "gender": "female",
+        "job_title": "Web Developer"
     },
     {
         "id": 2,
