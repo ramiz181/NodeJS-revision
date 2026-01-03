@@ -1,11 +1,7 @@
 [
     {
         "id": 1,
-        "first_name": "Renelle",
-        "last_name": "Butteris",
-        "email": "rbutteris0@foxnews.com",
-        "gender": "Female",
-        "job_title": "Programmer Analyst II"
+        "gender": "female"
     },
     {
         "id": 2,
@@ -73,17 +69,10 @@
     },
     {
         "id": 10,
-        "first_name": "Marina",
-        "last_name": "Crebo",
-        "email": "mcrebo9@multiply.com",
-        "gender": "Female",
-        "job_title": "Director of Sales"
-    },
-    {
-        "full_name": "ramiz",
+        "first_name": "ramiz",
+        "last_name": "malik",
         "email": "ramiz@gmail.com",
         "gender": "male",
-        "job_title": "Web developer",
-        "id": 11
+        "job_title": "Web Developer"
     }
 ]
