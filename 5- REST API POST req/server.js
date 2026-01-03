@@ -25,9 +25,7 @@ app.post('/api/users', (req, res) => {
 })
 
 
-
 // edit krna h data ksi bhe ID ka 
-
 app.patch('/api/users/:id', (req, res) => {
 
     const body = req.body
@@ -63,6 +61,19 @@ app.patch('/api/users/:id', (req, res) => {
 
     // users.push(updatedUser)
     // JSON.stringify(users)
+
+})
+
+// delete user by ID
+app.delete("/api/users/:id", (req, res) => {
+
+    const id = Number(req.params.id);
+    const updatedUser = users.filter(user => user.id !== id)
+
+    fs.writeFile('USERS.json', JSON.stringify(updatedUser), (err) => {
+        if (err) throw err
+    })
+    return res.json({ message: "User deleted" });
 
 })
 

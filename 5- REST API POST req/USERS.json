@@ -1,13 +1,5 @@
 [
     {
-        "id": 1,
-        "first_name": "Davie",
-        "last_name": "Fortgry",
-        "email": "davi@gmail.com",
-        "gender": "female",
-        "job_title": "Web Developer"
-    },
-    {
         "id": 2,
         "first_name": "Hortensia",
         "last_name": "Kinvan",
