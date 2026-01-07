@@ -1,0 +1,11 @@
+
+
+
+express.urlencoded()
+
+    ==> first check the Content-Type in headers
+        ==>> if Content-Type is x-www-form-urlencoded 
+                ==>> it parse the data and put it into req.body
+
+        ==>> else 
+                ==>> calls the next function
