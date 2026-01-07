@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "first_name": "Ramiz",
+        "last_name": "Malik",
+        "email": "ramizmalik@gmail.com",
+        "gender": "Male",
+        "job_title": "Backend Developer"
+    },
+    {
+        "id": 2,
+        "first_name": "Bassam",
+        "last_name": "Malik",
+        "email": "bassammalik@gmail.com",
+        "gender": "Male",
+        "job_title": "Graphics Designer"
+    },
+    {
+        "id": 3,
+        "first_name": "Wasif",
+        "last_name": "Ali",
+        "email": "wasifali@gmail.com",
+        "gender": "Male",
+        "job_title": "AI & ML engineer"
+    }
+]
