@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 
 const userSchema = new mongoose.Schema({
     firstName: {
@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
     gender: {
         type: String
     }
-})
+}, { timestamps: true })
 
 export const User = mongoose.model('User', userSchema)
 
