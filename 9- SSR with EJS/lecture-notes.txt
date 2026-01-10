@@ -1,0 +1,17 @@
+
+server side rendering 
+    ==> html document ko server pr load krwana and then send the fully rendered document/html to the client side
+
+
+Step-by-step:
+
+    1- client sends a request to the server
+    2- server generates the HTML (with data/response already filled in)
+    3- server sends this complete HTML document back to the client
+    4- browser directly displays the page
+
+
+==>> to do so, we have template engines 
+    ==> EJS ==> embedded JS templating
+    ==> pug
+    ==> handlebars, etc.
