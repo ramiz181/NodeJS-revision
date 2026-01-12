@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { dbConnection } from './src/config/db.config.js';
 import router from './src/routes/user.routes.js';
+import staticRoutes from './src/routes/static.routes.js';
 import path from 'path'
 
 const app = express()
@@ -14,7 +15,12 @@ app.use(express.urlencoded({ extended: false }))
 app.set('view engine', 'ejs')
 app.set('views', path.resolve('./src/views'))
 
+
+
 app.use('/user', router)
+app.use('/', staticRoutes)
+
+
 
 app.get('/', async (req, res) => {
 
