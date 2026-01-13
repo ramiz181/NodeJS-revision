@@ -10,14 +10,11 @@ export const handleUserSignup = async (req, res) => {
         email,
         password
     })
-
     return res.redirect('/')
 }
-
 export const handleUserLogin = async (req, res) => {
 
     const { email, password } = req.body
-
     const user = await AuthUser.findOne({ email, password })
     // if (!user) return res.redirect('/login', {
     //     error: "Invalid email or password"
@@ -26,13 +23,10 @@ export const handleUserLogin = async (req, res) => {
     if (!user) {
         return res.redirect('/login?error=Invalid%20email%20or%20password');
     }
-
     const sessionID = uuidv4()
 
     setUser(sessionID, user)
     res.cookie('uuid', sessionID)
 
-
     return res.redirect('/')
-
 }

@@ -24,11 +24,11 @@ app.set('views', path.resolve('./src/views'))
 
 app.use('/user', router)
 app.use('/', staticRoutes)
-app.use('/url', urlRoutes)
+app.use('/url', restrictToLoggedInUserOnly, urlRoutes)
 
-app.use('/', async (req, res) => {
-    const entries = await URL.find({})
-    
+app.use('/', restrictToLoggedInUserOnly, async (req, res) => {
+
+    const entries = await URL.find({ createdBy: req.user._id })
     res.render('home', {
         entries
     })

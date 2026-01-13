@@ -4,7 +4,6 @@ import { URL } from "../models/url.model.js"
 export const handleGenerateURL = async (req, res) => {
 
     const { redirectURL } = req.body
-
     if (!redirectURL) res.status(400).json({ error: 'URL is required' })
 
     const shortID = nanoid(8)
@@ -12,6 +11,7 @@ export const handleGenerateURL = async (req, res) => {
     await URL.create({
         shortURL: shortID,
         redirectURL,
+        createdBy: req.user._id
     })
     res.render('home', {
         shortID
@@ -22,8 +22,9 @@ export const handleGenerateURL = async (req, res) => {
 export const handleRedirectURL = async (req, res) => {
 
     const shortURL = req.params.shortID
+    
 
-    const entr = await URL.findOneAndUpdate({ shortURL }, {
+    const entry = await URL.findOneAndUpdate({ shortURL }, {
         $push: {
             visitorHistory: {
                 timestamp: new Date().toLocaleString()
