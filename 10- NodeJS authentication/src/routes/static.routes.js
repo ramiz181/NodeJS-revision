@@ -12,6 +12,10 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
+
+    if (req.query.error) {
+        console.log((req.query.error))
+    }
     res.render('login')
 })
 
