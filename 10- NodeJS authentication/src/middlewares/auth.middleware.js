@@ -12,5 +12,4 @@ export const restrictToLoggedInUserOnly = (req, res, next) => {
 
     req.user = user
     next()
-
 }

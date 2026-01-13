@@ -3,9 +3,7 @@ import { handleUserLogin, handleUserSignup } from '../controllers/user.controlle
 
 const router = express.Router()
 
-
 router.post('/signup', handleUserSignup)
 router.post('/login', handleUserLogin)
-
 
 export default router
