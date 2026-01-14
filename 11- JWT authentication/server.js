@@ -15,8 +15,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 dotenv.config();
 
-dbURLConnection
 dbAuthConnection
+dbURLConnection
 
 app.set('view engine', 'ejs')
 app.set('views', path.resolve('./src/views'))

@@ -23,10 +23,8 @@ export const handleUserLogin = async (req, res) => {
     if (!user) {
         return res.redirect('/login?error=Invalid%20email%20or%20password');
     }
-    const sessionID = uuidv4()
-
-    setUser(sessionID, user)
-    res.cookie('uuid', sessionID)
+    const token = setUser(user)
+    res.cookie('uuid', token)
 
     return res.redirect('/')
 }

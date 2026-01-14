@@ -6,6 +6,13 @@ dotenv.config();
 export const dbAuthConnection = mongoose.createConnection(
     process.env.MONGO_URI1
 );
+
+export const dbURLConnection = mongoose.createConnection(
+    process.env.MONGO_URI2
+);
+
+
+
 dbAuthConnection.on("connected", () => {
     console.log(
         `User - MongoDB Atlas connected: PORT: ${dbAuthConnection.port}, name: ${dbAuthConnection.name}`
@@ -17,9 +24,6 @@ dbAuthConnection.on("error", (err) => {
 
 
 
-export const dbURLConnection = mongoose.createConnection(
-    process.env.MONGO_URI2
-);
 dbURLConnection.on("connected", () => {
     console.log(
         `URL - MongoDB Atlas connected: PORT: ${dbURLConnection.port}, name: ${dbURLConnection.name}`
