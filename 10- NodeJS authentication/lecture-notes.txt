@@ -15,3 +15,54 @@ Step-by-step:
     ==> EJS ==> embedded JS templating
     ==> pug
     ==> handlebars, etc.
+
+.
+.
+.
+.
+.
+.
+
+
+export const URL = dbURLConnection.model('URL', urlSchema)
+
+
+export const dbURLConnection = mongoose.createConnection(
+    process.env.MONGO_URI2
+);
+
+
+==>> mongoose.createConnection() returns a connection object and .model() exist on that Connection object
+    + mongoose.createConnection don't return any promise 
+        so, .then() and .catch won't work like that 
+            e.g mongoose.createConnection().then   ==== wrong
+
+            try catch will work incase of -- function 
+
+            e.g - right way :
+                    export const dbAuthConnection = async () => {
+                        try {
+                            await mongoose.createConnection(process.env.MONGO_URI1);
+                            console.log("Auth DB connected");
+                        } catch (error) {
+                            console.error("DB connection failed:", error);
+                        }
+                    };
+            
+
+==>> So, to access .model() we have to use it as object not as a function
+
+==>> And to explicitly log connection/error message we have to use .on() method which triggers on success/failed connection
+
+.
+.
+.
+.
+.
+
+
+==>> .on() is an event listener method
+    => when connection will create it will trigger this .on() method 
+    
+.on(eventName, callback) means:
+    -- "When this thing emits this event, run this callback function."
