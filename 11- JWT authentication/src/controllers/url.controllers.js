@@ -22,7 +22,6 @@ export const handleGenerateURL = async (req, res) => {
 export const handleRedirectURL = async (req, res) => {
 
     const shortURL = req.params.shortID
-    
 
     const entry = await URL.findOneAndUpdate({ shortURL }, {
         $push: {
@@ -31,9 +30,7 @@ export const handleRedirectURL = async (req, res) => {
             }
         }
     })
-
     res.redirect(entry.redirectURL)
-
     // res.send("Hello")
 }
 

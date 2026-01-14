@@ -1,6 +1,5 @@
 import { AuthUser } from "../models/user.model.js"
-import { v4 as uuidv4 } from 'uuid'
-import { setUser } from "../services/auth.service.js"
+import { generateToken } from "../services/auth.service.js"
 
 export const handleUserSignup = async (req, res) => {
     const { name, email, password } = req.body
@@ -23,7 +22,7 @@ export const handleUserLogin = async (req, res) => {
     if (!user) {
         return res.redirect('/login?error=Invalid%20email%20or%20password');
     }
-    const token = setUser(user)
+    const token = generateToken(user)
     res.cookie('uuid', token)
 
     return res.redirect('/')
