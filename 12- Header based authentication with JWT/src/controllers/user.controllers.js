@@ -23,7 +23,7 @@ export const handleUserLogin = async (req, res) => {
         return res.redirect('/login?error=Invalid%20email%20or%20password');
     }
     const token = generateToken(user)
-    res.cookie('uuid', token)
-
-    return res.redirect('/')
+    // res.cookie('uuid', token)
+    return res.json({ token })
+    // return res.redirect('/')
 }

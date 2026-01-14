@@ -12,6 +12,7 @@ import { URL } from './src/models/url.model.js';
 const app = express()
 const PORT = 5001
 app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 app.use(cookieParser())
 dotenv.config();
 

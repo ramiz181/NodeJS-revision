@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid"
 import { URL } from "../models/url.model.js"
 
 export const handleGenerateURL = async (req, res) => {
