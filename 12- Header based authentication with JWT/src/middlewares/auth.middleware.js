@@ -1,0 +1,16 @@
+import { verifyToken } from "../services/auth.service.js"
+
+
+
+export const restrictToLoggedInUserOnly = (req, res, next) => {
+
+    const userUuid = req.cookies?.uuid
+    if (!userUuid) return res.redirect('/login?error=User%not%logged-in')
+
+    const user = verifyToken(userUuid)
+    if (!user) return res.redirect('/login?error=User%not%found')
+    // console.log("auth middleware", user);
+
+    req.user = user
+    next()
+}
