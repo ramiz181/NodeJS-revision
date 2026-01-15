@@ -1,5 +1,30 @@
 
+
+Authentication
+    Authentication is the process of verifying identity.
+    e.g "Is this user really who they claim to be?"
+
+    What authentication checks:
+        - Username + password
+        - OTP
+        - Token (JWT)
+        - Session ID
+
+    When authentication happens
+        - At login
+        - At every protected request
+
+Example: 
+    User says: "I am Ramiz"
+    System asks: "Prove it"
+
+
+
+
+
+
 server side rendering 
+
     ==> html document ko server pr load krwana and then send the fully rendered document/html to the client side
 
 
