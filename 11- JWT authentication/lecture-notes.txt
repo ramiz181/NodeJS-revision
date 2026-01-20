@@ -1,0 +1,9 @@
+
+
+
+JWT is like:
+    - mn na login kr lya us k bad mn na koe server pr request ki
+    - server ko mn na login krty hue email pass dya tha
+    - ab request pr server bol rha h tum ramiz ho to prove kro
+    - to m token duga jo mn na login krty waqt generate kya tha
+    - to server verify kry ga signature sy k ye wohi user ka token h jo mna na isko login k waqt generate kr k dya tha

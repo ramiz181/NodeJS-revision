@@ -6,6 +6,7 @@ export const restrictToLoggedInUserOnly = (req, res, next) => {
 
     const userUuid = req.cookies?.uuid
     // const userUuid = req.headers.cookie    // ===> valie
+    // const userUuid = req.headers['cookie']
 
     console.log("Line 10  middleware", userUuid);
 
