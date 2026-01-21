@@ -19,8 +19,6 @@ export const authentication = (req, res, next) => {
     }
 }
 
-
-
 export const restrictTo = (roles = []) => {
 
     return function (req, res, next) {

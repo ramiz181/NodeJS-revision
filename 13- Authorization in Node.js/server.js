@@ -28,10 +28,20 @@ app.use('/user', router)
 app.use('/', staticRoutes)
 
 app.use(authentication)
-app.use('/url', restrictTo('user'), urlRoutes)
-app.use('/',  restrictTo('user'), async (req, res) => {
+
+app.use('/url', restrictTo(['user', 'admin']), urlRoutes)
+
+app.get('/', restrictTo(['user', 'admin']), async (req, res) => {
 
     const entries = await URL.find({ createdBy: req.user._id })
+    res.render('home', {
+        entries
+    })
+})
+
+app.get('/admin/urls', restrictTo(['admin']), async (req, res) => {
+
+    const entries = await URL.find({})
     res.render('home', {
         entries
     })
